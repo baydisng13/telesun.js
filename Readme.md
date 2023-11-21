@@ -11,115 +11,107 @@ Modern Telegram Bot API framework for App Script
 
 </header>
 
-## Introduction
+## መግቢያ
 
-A Telegram bot is a program that offers functions and automations that Telegram users can integrate in their chats, channels, or groups
+ቴሌሰን ቦት የሚለዋወጥ የፕሮግራም እና የአከባቢ ድረ-ገጾች የሚናገረው አትክልት ነው ተግባራዊ መረጃዎት እና ተጠቃሚ መደብ የምንኖር እውነተኛ ነው።
 
-Telesun is a library that makes it simple for you to develop your own Telegram bots using JavaScript and [Apps Script](https://developers.google.com/apps-script)
+ቴሌሰን ከ JavaScript እና [Apps Script](https://developers.google.com/apps-script) በሚገኝ አይነት ቦት ላይ የሆነውን እትም መጠቀም አድርጋችኋል።
 
-### Features
+### አማራጮች
 
-- Full [Telegram Bot API 6.0](https://core.telegram.org/bots/api) support
-- Simpler 🌟
-- easier working across Google products like `Youtube`, `Drive`, `Gmail...`
-- per click `Deployment` on google cloud
-- `Real-Time Database` (Google sheet) already integrated
-- Develop `100+` of your Bots
-- `Basic Javascript` is enough
+- በ [Telegram Bot API 6.0](https://core.telegram.org/bots/api) የተጠቀሙ እትም
+- በተለያዩ መረጃዎት መከታተል ያለ
+- በ Google እናቶን እትም ላይ በ `Youtube`, `Drive`, `Gmail...` ተብሏል
+- በጊዜ በተጨማሪ ወጥተን ወደ Google Cloud መገኘን
+- በራሱ በ የ Google ተማሪ (Google sheet) ለመጠቀም አልቻልኩም
+- የምንገኝ ስለ በለጠ የ `100+` ቦት መረጃ ይጠቀሙ
+- በመንገድ ወደ ተከተለ የ `Basic Javascript` እና እንደሚጠቀሙ መቀመጫ ነው
+
 
 ---
 
-## [Setting Up & Getting Started With Apps Script](https://github.com/abdiu34567/telesun.js/wiki/Getting-Started)
+## [Apps Script እና Telesun.js እንደመጠቀሚያ እና መጀመሪያ መረጃ](https://github.com/abdiu34567/telesun.js/wiki/Getting-Started)
 
 ---
 
 <br>
 
-### Example
+### ምንዛሬ
 
-once you `import library`, then you can create the following function and `go send any message to your bot` and **run** `WelcomeToTelesun` function
+በመከፋቱ ከተመነሻ `መረጃ እንደሚሰጠውን በአፕስ ስክሪፕት` እና በሌላ ክፍል ውጤቱ ከምሳሌ መከፋት እና `ምላሽ ተጠቅመን ወደ ተማሪዎች ላይ መመገብ` አልቻልኩም ።
 
 ```js
-// send message to your bot, then create the following function and run the function
-
+// ከአፕስ ስክሪፕት ውስጥ መመገብ ከማንበረት በተመነሻ የተመደበ የፋይና ትክክለኛ አካባቢ ይሰጠዋል
 function WelcomeToTelesun() {
-  //pass your bot token
+  // ለመመገብ የተቀበለ የታነበ አፕስ ስክሪፕት ውስጥ ተከታታይ የሆነ ስኩዕ ቶክን ይጠቀሙ
   const bot = new Bot.Telesun(<<botToken>>);
 
-  //will executed always
-  bot.Use((ctx) => ctx.reply("Hello World!"));
+  // ለመቆጣጠር ለአንደኛው የስነልቦና ሰው ማህበረሰብ ይኖርበታል
+  bot.Use((ctx) => ctx.reply("ሰላም ሰላም!"));
 
-  //executed when <</start>> command sent to bot
-  bot.Start((ctx)=> ctx.reply("This is start Command"))
+  // ለመከታተል <</start>> ኮማንድ ላይ የተቀበለ ስኩዕ ቶክን ይጠቀሙ
+  bot.Start((ctx)=> ctx.reply("ይህ ምንዛሬ ኮማንድ ነው"))
 
-  //when <hello> message sent
-  bot.Hears('hello', (ctx)=> ctx.reply("This is hello message"))
+  // ለምሳሌ <hello> መልዕክት ተጠቀመበት የተቀበለ ስኩዕ ቶክን ይጠቀሙ
+  bot.Hears('hello', (ctx)=> ctx.reply("ይህ የመልዕክት መልዕክት ነው"))
 
-  //when photo sent
-  bot.Photo((ctx)=> ctx.reply("This is photo"))
+  // ለምሳሌ ሎክ ተመን ላይ የተመነሻ መልዕክት ተጠቀመበት
+  bot.Photo((ctx)=> ctx.reply("ይህ ሎክ ነው"))
 }
 ```
 
-For additional bot examples see [examples](https://github.com/abdiu34567/telesun.js/wiki/Example-Bots) folder
+ለተጨማሪ መረጃ ምንዛሬ [ምዝገባው](https://github.com/abdiu34567/telesun.js/wiki/Example-Bots) ዝርዝሩን ይመልከቱ
 
 <br>
 
-### Resources
+### ስለኛው አስነብበን
 
-- **[Telegram Group](https://t.me/App_Script_Js)**
-- **[GitHub Discussions](https://github.com/abdiu34567/telesn.js/discussions)**
-- **[Documentation](https://github.com/abdiu34567/telesun.js/wiki)**
-
-<br>
-
-## Getting started
+- **[ቴሌግራም ቡድን](https://t.me/App_Script_Js)**
+- **[GitHub ሰነድ](https://github.com/abdiu34567/telesn.js/discussions)**
+- **[መረጃ](https://github.com/abdiu34567/telesun.js/wiki)**
 
 <br>
 
-### 💊 Telegram token
-
-To use the Telegram Bot API, you first have to get a bot account by chatting with [BotFather](https://t.me/BotFather).
-
-BotFather will give you a token, something like `123456789:AbCdfGhIJKlmNoQQRsTUVwxyZ`.
-
+## መጀመሪያ ምንዛሬ
+<br>
+### 💊 ቴሌግራም ቶክን
+ተመን የቴሌግራም ቦታ አፕነ በተመነሻ ተጠቅመን በ [BotFather](https://t.me/BotFather) በማግኘት አካባቢ ይደውሉ።
+BotFather ይህን ቶክን እናመሰግናለን እናመሰግናለን፣ ይህም ለአንደኛው ቦታ ነው እና ወደ `123456789:AbCdfGhIJKlmNoQQRsTUVwxyZ` ወደታች ታሪክ አይደለም።
 <br>
 
-### 👩‍💻 Create Your First Registration bot
+### 👩‍💻 የመጀመሪያ ለመመገብ ቦታ እናደርጋለን
 
-➖ The bot will register `username` and `password` by [long polling](https://github.com/abdiu34567/telesun.js/wiki/Long-Polling),<br>
-➖ then finally we deploy the bot within just 2 clicks as `webhook` on google cloud
+➖ በ [ለማወቅ](https://github.com/abdiu34567/telesun.js/wiki/Long-Polling) የአትክምህ፣ የቡድንና የይለና ይደረገበት ቦታ።<br>
+➖ በተጨማሪ ወደ `webhook` አገናኝ ተመን እናመጣለን
 
-> - [Create apps script project](https://github.com/abdiu34567/telesun.js/wiki/Getting-Started)
-> - [Import library](https://github.com/abdiu34567/telesun.js/wiki/Import-Telesun)
+> - [አፕስ ስክሪፕት ፐሮጀንት መልእክት](https://github.com/abdiu34567/telesun.js/wiki/Getting-Started)
+> - [አምፐርት ሊመጣ](https://github.com/abdiu34567/telesun.js/wiki/Import-Telesun)
 
 ```js
-
 /**
- * create function called doPost()
- * copy and paste the following code to your doPost()
- * go and type << /startreg >> command on your bot
- * go back to apps script and run dopost()
- * then check your bot
- *
+ * የምንዛሬ የ doPost() ማድረግ ይፈጥሩ።
+ * እናነግሩ በአንድ ለመቀጠል እና አንደ መረጃውን ለመሞከር ወደ << /startreg >> ኮማንዶ አቅርብዎ።
+ * ተጨማሪ ወደ apps script ውስጥ ለመነሻዎ ውጤቱን በጣም መረጃውን ያግኙ።
+ * ከዚህም በኋላ ወደ መከፋቱ መቆጣጠር ይጀምሩ።
  */
 
 /**
- * pass your bot token
- * connecting the bot to Telesun Library
+ * አፕስ ስክሪፕት ለ Telesun Library ተጠቅመን
+ * የቡድን ኮማንድ አካባቢ ለመጠቀም
 */
 const bot = new Bot.Telesun(<<botToken>>);
 
 function doPost(){
 
  /**
-  * when user send /startreg command
+  * እናንተን ያግኙ በ /startreg ኮማንዶ ለመሞከር
   */
   bot.Command('startreg',(ctx)=>{
 
-    //ask user to send thier username
-    ctx.reply("Please type Your username ?")
+    //ይህንን የተለያዩ ምንዛሬ እናመሰግናለን
+    ctx.reply("እባኮት መጠቀም ያለብን መለያ ያላቸውን መረጃ ይላኩልን ?")
 
-    //save stage that, next the bot is waiting for username
+    //እባኮት መረጃ በጣም መረጃውን በ አልባ ያስገቡ
     ctx.setStage("username")
   })
 
@@ -129,104 +121,196 @@ function doPost(){
 
 ```js
 /**
- * Add the following function to the doPost(), but don't delete the previous code
- * go to bot and send your username
- * go to apps script and run doPost() again
- * then check your bot
+ * የምንዛሬ የ doPost() ማድረግ ይፈጥሩ።
+ * እናነግሩ በአንድ ለመቀጠል እና አንደ መረጃውን ለመሞከር ወደ << /startreg >> ኮማንዶ አቅርብዎ።
+ * ተጨማሪ ወደ apps script ውስጥ ለመነሻዎ ውጤቱን በጣም መረጃውን ያግኙ።
+ * ከዚህም በኋላ ወደ መከፋቱ መቆጣጠር ይጀምሩ።
  */
+
+/**
+ * አፕስ ስክሪፕት ለ Telesun Library ተጠቅመን
+ * የቡድን ኮማንድ አካባቢ ለመጠቀም
+*/
+const bot = new Bot.Telesun(<<botToken>>);
+
 function doPost(){
 
-  ......//❌ don't remove previos codes
+ /**
+  * እናንተን ያግኙ በ /startreg ኮማንዶ ለመሞከር
+  */
+  bot.Command('startreg',(ctx)=>{
 
-  //if stage is already username
-  bot.Stage('username', (ctx)=>{
-      //accessing message text as username
-      let _Username = ctx.message().text
+    //ይህንን የተለያዩ ምንዛሬ እናመሰግናለን
+    ctx.reply("እባኮት መጠቀም ያለብን መለያ ያላቸውን መረጃ ይላኩልን ?")
 
-      //saving to temporary session which lasts 10 minutes by default
-      Bot.TSession.set('username', _Username)
-
-      //ask user to send thier password
-      ctx.reply("Please type Your password ?")
-
-      //save stage as waiting for password
-      ctx.setStage('password')
+    //እባኮት መረጃ በጣም መረጃውን በ አልባ ያስገቡ
+    ctx.setStage("username")
   })
 
 }
 ```
 
+
 ```js
 /**
- * Add the following function to the doPost(), but don't delete the previous code
- * go to bot and send your password
- * go to apps script and run doPost() again
- * then check your bot
+ * እባኮት እናንተን የምንዛሬ የ doPost() ማድረግ እናዘንባለን፣ በመከፋቱ ያለብን ኮድ መቆጣጠር የተቻለ ምንዛሬውን መነሻ ተመን እናመጣለን።
+ * ለአንደ የምንዛሬው መረጃ በ apps script ውስጥ ያቀናሉ
  */
 function doPost(){
 
-  ...... //❌ don't remove previos codes
+  ...... //❌ በማወቅ ተመን ከሚታገል እባኮት በጣም ይሄንን የምንዛሬ ማህበረሰብ አድርጉ
 
-  ......//❌ don't remove previos codes
+  //ስለዚህ መረጃው የ username ያለብን ምንዛሬ መነሻ ተመን እናመጣለን
+  bot.Stage('username', (ctx)=>{
+      //መነሻ ተመን እና አዲስ የ username ይዞ የመረጃ ግምት ተመን ለአንደኛው አዝማሚ አስመጡ
 
-   //if stage is already password
+      //username የሚመጣውን መነሻ እናቀመጣለን
+      let _Username = ctx.message().text
+
+      //በአንደ ሰነዶ ላይ ለመቀመጥ ሊመረጡ የእያንዳንዱ የምንዛሬ የመረ
+
+ጃ ግምት እናቀመጣለን
+      Bot.TSession.set('username', _Username)
+
+      //የተጠቀመበት ድረ-ገጽ እና ላይ መረጃ ለ ማንበረት እና መከታተል
+      ctx.reply("እባኮት መጠቀም ያለበትን የመረጃ ግምት መመከር እናሳውቅ።\nምንዛሬ አዲስ የመረጃውን ግምት እና እስከ ሰነዶ ታሪክ በመቀመጥ እናሳውቃለን")
+      
+      //የ username መመረጃ በጣም የ password እናመጣለን
+      ctx.setStage('password')
+  })
+
+}
+
+```
+
+```js
+/**
+ * ለአንደ ምንዛሬ እናንተን የምንዛሬ የ doPost() ማድረግ እናዘንባለን፣ በመከፋቱ ያለብን ኮድ መቆጣጠር የተቻለ ምንዛሬውን መነሻ ተመን እናመጣለን።
+ * ለአንደ የምንዛሬው መረጃ በ apps script ውስጥ ያቀናሉ
+ */
+function doPost(){
+
+  ...... //❌ በማወቅ ተመን ከሚታገል እባኮት በጣም ይሄንን የምንዛሬ ማህበረሰብ አድርጉ
+
+  ...... //❌ በማወቅ ተመን ከሚታገል እባኮት በጣም ይሄንን የምንዛሬ ማህበረሰብ አድርጉ
+
+   //ስለዚህ መረጃው የ password ያለብን ምንዛሬ መነሻ ተመን እናመጣለን
   bot.Stage('password', (ctx)=>{
 
-       //accessing username from temporary session
+       //መነሻ ተመን እና አዲስ የ password ይዞ የመረጃ ግምት ተመን ለአንደኛው አዝማሚ አስመጡ
+
+       //username የሚመጣውን መነሻ እናቀመጣለን
       let _Username = Bot.TSession.getValue('username')
 
-      //send Message as user already finished the registration
-      ctx.reply(`User Registered\n\n`+
-     `UserName: ${_Username}`+
-     `Password: ${ctx.message().text}`)
+      //password የሚመጣውን መነሻ እናቀመጣለን
+      let _Password = ctx.message().text
+
+      //የተጠቀመበት ድረ-ገጽ እና ላይ መረጃ ለ ማንበረት እና መከታተል
+      ctx.reply(`የተመን መመረጃ\n\n`+
+     `መጠቀም የተቀበለበት ምንዛሬ: ${_Username}\n`+
+     `የምንዛሬ ኮድ: ${_Password}`)
     }
   })
 
 
 }
-
-
 ```
+
+
+/**
+ * እናንተን በ doPost() ወደገጠሩ እትም ወደኋላ አስማምጣት፣ በመከፋቱ ያለብን ኮድ መቆጣጠር የተቻለ ምንዛሬውን መነሻ ተመን እናመጣለን።
+ * ለአንደ የምንዛሬው መረጃ በ apps script ውስጥ ያቀናሉ
+ */
+function doPost(){
+
+  ...... //❌ በማወቅ ተመን ከሚታገል እባኮት በጣም ይሄንን የምንዛሬ ማህበረሰብ አድርጉ
+
+  //ግንዛቤ እናንተን በ username የተለያዩ ምንዛሬ መነሻ ተመን እናመጣለን
+  bot.Stage('username', (ctx)=>{
+      //ምንዛሬ መነሻ የሚመጣውን መነሻ እናቀመጣለን
+
+      //መነሻ ተመን እና አዲስ የ username ይዞ የመረጃ ግምት ተመን ለአንደኛው አዝማሚ አስመጡ
+
+      //username የሚመጣውን መነሻ እናቀመጣለን
+      let _Username = ctx.message().text
+
+      //በአንደ ሰነዶ ላይ ለመቀመጥ ሊመረጡ የእያንዳንዱ የምንዛሬ የመረጃ ግምት እናቀመጣለን
+      Bot.TSession.set('username', _Username)
+
+      //የተጠቀመበት ድረ-ገጽ እና ላይ መረጃ ለ ማንበረት እና መከታተል
+      ctx.reply("እባኮት መጠቀም ያለበትን የመረጃ ግምት መመከር እናሳውቅ።\nምንዛሬ አዲስ የመረጃውን ግምት እና እስከ ሰነዶ ታሪክ በመቀመጥ እናሳውቃለን")
+      
+      //የ username መመረጃ በጣም የ password እናመጣለን
+      ctx.setStage('password')
+  })
+
+}
+
+/**
+ * እናንተን በ doPost() ወደገጠሩ እትም ወደኋላ አስማምጣት፣ በመከፋቱ ያለብን ኮድ መቆጣጠር የተቻለ ምንዛሬውን መነሻ ተመን እናመጣለን።
+ * ለአንደ የምንዛሬው መረጃ በ apps script ውስጥ ያቀናሉ
+
+ */
+ ```js
+function doPost(){
+
+  ...... //❌ በማወቅ ተመን ከሚታገል እባኮት በጣም ይሄንን የምንዛሬ ማህበረሰብ አድርጉ
+
+  ...... //❌ በማወቅ ተመን ከሚታገል እባኮት በጣም ይሄንን የምንዛሬ ማህበረሰብ አድርጉ
+
+   //ስለዚህ መረጃው የ password ያለብን ምንዛሬ መነሻ ተመን እናመጣለን
+  bot.Stage('password', (ctx)=>{
+
+       //መነሻ ተመን እና አዲስ የ password ይዞ የመረጃ ግምት ተመን ለአንደኛው አዝማሚ አስመጡ
+
+       //username የሚመጣውን መነሻ እናቀመጣለን
+      let _Username = Bot.TSession.getValue('username')
+
+      //password የሚመጣውን መነሻ እናቀመጣለን
+      let _Password = ctx.message().text
+
+      //የተጠቀመበት ድረ-ገጽ እና ላይ መረጃ ለ ማንበረት እና መከታተል
+      ctx.reply(`የመተው ተመን\n\n`+
+     `መጠቀም የተቀበለበት ምንዛሬ: ${_Username}\n`+
+     `የምንዛሬ ኮድ: ${_Password}`)
+    }
+  })
+
+
+}
+```
+
+Certainly! Here's the translation of the provided JavaScript code into Amharic:
+
 
 <br>
 
-### 📡 Deploying Registration Bot
-
-In Order to deploy your bot, first, check :
-
-- your main file is `code.gs`
-- your main function is `doPost(e)`
-
-Then, we need to `set webhook` <br>
-
-> you can get your `webhook url` after u have followed [Deployment](https://github.com/abdiu34567/telesun.js/wiki/Deployments) steps
+### 📡 በረጅም የመዝገብ ቦት መነሻ ማግኘት
+በተጨማሪም የተለያዩ ቦት ፋይሎት የመዝገብ መረጃ ለመሰብሰብ የሚችል ወቅታዊ ተለዋዋጭዎች ምንዛሬዎች በመመዝገብ የጽሁፍን ፋይሎት ባያንና የሚያምር መመዝገብ ይሆናል።
+- የአሁኑን የመጠቀሚ ፋይሎት በ `code.gs` ምንዛሬ ነበር
+- የአሁኑን የመጠቀሚ ምንዛሬ የ `doPost(e)` ነበር
+በማለት እኛ እንደእርስዎ ይጠቀሙ። <br>
+> ከገንዘብ ላይ በ `webhook url` እናም በላይ ማግኘት የፋይሎትዎ በመቀመጥ ተጠቅመን እናመጣለን [Deployment](https://github.com/abdiu34567/telesun.js/wiki/Deployments) ስለሚለዋወጥ ተመን ይመልከቱ
 
 ```js
 /**
- * Create this function and run once, then you can delete it
+ * ይህ እንደአንደ እስከምንዛሬ የመረጃ ግምት መጠቀም ይጀምራል፣ እናንተ እንደምንመኝ እናመልክታለን
  */
 function settingWebhook() {
   const token = "5862849341:AAHvKz2HGq5y9NBD4B4YAsEI0X9qE";
 
-  //use your webhook url as url object parameter
+  //እንደአንደ በጽሁፉ የፋይል አድራጎት በ url እና ምሳሌ እንዲሆን እንጠቀሙ
   Bot.setWebHook(token, { url: "https://..." });
 }
 ```
 
-🌟💪 `Finally Check Your Bot`
+🌟💪 `እንደእርስዎ አስጠንቀመጡ`
 
 <br>
 
-## License
-
-The Telesun library is open-source software released under the [MIT License](https://opensource.org/licenses/MIT).
-
+## ፋይሎት
+የ Telesun ምላሽ የነጥብ ስለሚለዋወጥ ነው። እንደ [MIT License](https://opensource.org/licenses/MIT) የተለዋወጥ ነው።
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-Copyright (c) 2022 Abdi Urgessa
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+በዚህ መሠረት በአትክልት ተከፍላቸው። በነጻ ሊተግበሉ ነው፤ የተቀበሉት ፋይሎቶች በአስተያየቶች እና ድረ-ገጾች ውስጥ እንደ ሰጠው ለመሄድ አስፈላጊ ተመን እና ሊደረግ እንደ ሆነ እንዲሆን ይሆናል። ለማህበረሰብ ለመቀጠል ወቅታዊ እየተሞነ ተለዋወጥ አለው።
+ስለዚህ ከአስተያየቶች ወደ ሊተግበሩ ወደ ምንዛሬ ባተኮርበው እንደአስተያየት እንዲሆን እና ከእያንዳንዱ ሰዓት በመያዝ ሊሆን ይገባል።
+ተጨማሪ መነሻዎት እና አጠቃቀምዎት የሚጠቀሙበት ማህበረሰብ ይህን ስለ ማግኘት የዚህን ፋይሎት እናመልከት!
